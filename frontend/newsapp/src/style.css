@@ -1,0 +1,577 @@
+.logo {
+  height: 60px;
+  font-family: "Montserrat", sans-serif; /* Sleek and modern font */
+  font-size: 2rem; /* Adjust font size for better visibility */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #ffffff; /* Pure white color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite; /* Add animation */
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Scale up slightly */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.top {
+  margin-top: 0px;
+}
+
+/* Top Stories */
+.top-stories {
+  padding: 0px 20px 20px;
+}
+
+.top-stories h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* Articles Grid */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.article-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.article-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.article-card a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.article-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Adjusted margins for page layout */
+body {
+  margin: 0;
+  padding-top: 60px; /* Offset for fixed navbar */
+  font-family: Arial, sans-serif;
+}
+
+/* Additional Styles for Better UX */
+button {
+  cursor: pointer; /* Ensure all buttons have a pointer cursor */
+}
+
+/* Accessibility Improvements */
+a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline; /* Underline on hover/focus for accessibility */
+}
+
+/* General Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Card Loading State */
+.article-card.loading {
+  background-color: #f0f0f0; /* Light gray background for loading state */
+  animation: pulse 1.5s infinite; /* Add a pulse animation */
+}
+/* Overlay Container */
+.overlay {
+  position: fixed; /* Fixed position to overlay on the screen */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 100; /* Ensure it appears above other content */
+}
+
+/* White Box for the Message */
+.overlay-message {
+  background-color: white; /* White background for the message box */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  text-align: center; /* Center text inside the box */
+  max-width: 400px; /* Maximum width of the box */
+  width: 90%; /* Responsive width */
+}
+
+/* Login Button Styles */
+.login-button {
+  margin-top: 15px; /* Space between the message and the button */
+  padding: 10px 20px; /* Padding for the button */
+  background-color: slategray; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #666; /* Darker shade on hover */
+}
+
+/* Additional Styles for Better UX */
+button {
+  font-family: inherit; /* Ensure button uses the same font as the rest of the app */
+}
+
+/* Accessibility Improvements */
+.overlay-message {
+  font-size: 1.2rem; /* Slightly larger font size for better readability */
+  font-weight: bold;
+  color: #333; /* Darker text color for contrast */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically align items */
+  padding: 10px 20px;
+  background-size: cover;
+  background-image: url("/bgn3.jpg"); /* Ensure the path is correct */
+  background-repeat: no-repeat;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+  box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+/* Left Section of Navbar */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Right Section of Navbar */
+.navbar-right {
+  display: flex;
+  justify-content: flex-end; /* Push items to the right */
+  align-items: center; /* Center items vertically */
+  gap: 15px; /* Add spacing between items */
+  margin-left: auto; /* Push navbar-right to the right */
+}
+
+/* Menu Icon */
+.menu-icon {
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  color: white; /* Icon color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.8rem; /* Adjust icon size for better visibility */
+  display: flex; /* Ensure icon is a flex container */
+  align-items: center; /* Center the icon content */
+  justify-content: center; /* Center the icon content */
+  padding: 5px; /* Optional padding for better click area */
+}
+
+/* Dropdown Menu */
+.menu {
+  position: absolute; /* Ensure the menu is positioned relative to the parent */
+  top: 60px; /* Adjust to align the menu below the navbar */
+  right: 10px; /* Align close to the right edge */
+  background-color: white; /* Background color for the menu */
+  color: black; /* Text color */
+  padding: 20px 10px; /* Padding for the menu content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  display: none; /* Initially hide the menu */
+  width: 200px; /* Set a fixed width for consistency */
+  z-index: 1100; /* Ensure the menu appears above other content */
+
+  width: 100px;
+}
+
+/* Show Menu when Active */
+.menu-icon:hover + .menu,
+.menu-icon:focus + .menu {
+  display: block; /* Show menu on hover or focus */
+}
+
+/* Links Inside Menu */
+.menu a {
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Space between icon and text */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 0; /* Add spacing between items */
+  font-size: 16px; /* Adjust font size */
+  font-weight: 500; /* Slightly bold */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Links */
+.menu a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  border-radius: 5px; /* Rounded effect on hover */
+}
+
+/* Toggle or Additional Controls */
+.menu .toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Adjust Icon Sizes */
+.menu a svg {
+  width: 20px;
+  height: 20px;
+  fill: #333; /* Adjust icon color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .menu {
+    right: 0; /* Adjust alignment for smaller screens */
+    width: 100%; /* Full width for dropdown */
+    border-radius: 0; /* Remove rounded corners */
+  }
+}
+
+/* AuthForm.css */
+.auth-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-form button {
+  background-color: slategray;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.auth-form button:hover {
+  background-color: #666;
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed; /* Fixed position to overlay on the screen */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 100; /* Ensure it appears above other content */
+}
+
+/* Overlay content styles */
+.overlay-content {
+  background-color: white; /* White background for the content */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* Position relative for the close button */
+}
+
+/* Close button styles */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px; /* Add some space between menu icon and profile icon */
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%; /* Position below the icon */
+  right: 0; /* Align to the right */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  color: black;
+  width: 100px;
+  align-content: space-between;
+  border-radius: 10px;
+}
+
+.profile-dropdown p {
+  margin: 0;
+  padding: 5px 0;
+}
+.profile-dropdown button {
+  margin-top: 5px; /* Add space above the button */
+  background-color: slategray; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s;
+  width: 80px;
+  height: 25px;
+}
+.profile-dropdown button:hover {
+  background-color: #666; /* Darker shade on hover */
+}
+
+/* Centering styles for loading spinner and error message */
+.loading-spinner,
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text */
+}
+
+/* Optional styles for loading spinner */
+.loading-spinner img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
+/* Styles for error message */
+.error-message {
+  color: red; /* Change color as needed */
+  font-size: 1.2em; /* Adjust font size as needed */
+}
+
+/* Optional styles for retry button */
+.error-message button {
+  margin-top: 10px; /* Space between message and button */
+  padding: 10px 20px; /* Button padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.error-message button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1; /* Take up available space */
+}
+
+footer {
+  background-color: slategray;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: relative; /* Normal footer behavior */
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.social-media {
+  margin: 10px 0;
+}
+
+.social-media a {
+  margin: 0 15px;
+  font-size: 24px; /* Adjust size of icons */
+}
+
+.social-media a:hover {
+  color: #ffcc00;
+}
+
+/* Category Buttons Section */
+.category-buttons {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Space out buttons evenly */
+  margin: 40px 0; /* Margin above and below the buttons */
+}
+
+.cat-title {
+  padding: 10px 10px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+}
+
+.category-buttons button {
+  background-color: slategray; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 10px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  flex: 1; /* Allow buttons to grow equally */
+  margin: 0 5px; /* Space between buttons */
+}
+
+.category-buttons button:hover {
+  background-color: #666; /* Darker shade on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .category-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: center; /* Center buttons */
+  }
+
+  .category-buttons button {
+    width: 100%; /* Full width for buttons on small screens */
+    margin: 5px 0; /* Space between stacked buttons */
+  }
+}
+
+.read-history {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.read-history h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Darker text for headings */
+}
